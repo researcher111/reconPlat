@@ -1,0 +1,1 @@
+"./PCD8544.obj" "./ADC_and_LCD.obj" "../lnk_msp430g2452.cmd" -l"libc.a" 

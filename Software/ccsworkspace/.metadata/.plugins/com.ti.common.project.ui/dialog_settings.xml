@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.rtsc.project.ui.preferences.RTSCProductsPreferencePage">
+		<item value="C:\ti\ccsv5\ccs_base" key="ToolsPreferencePage.BROWSE_FILTER"/>
+	</section>
+	<section name="com.ti.ccstudio.project.ui.internal.preferences.CodegenToolsPreferencePage">
+	</section>
+</section>
