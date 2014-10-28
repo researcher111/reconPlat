@@ -1,0 +1,18 @@
+#include <msp430.h>
+#include "LCD.h"
+#include "lightSense.h"
+
+void main(void) {
+	WDTCTL = WDTPW + WDTHOLD;
+	unsigned int lux;
+	char* reading;
+	LCD_init();
+	lightSense_int(&lux);
+	while(1) {
+		LCD_gotoXY(0,2);
+		LCD_writeString("LUX:");
+		reading = convertADC(lux,-1);
+		LCD_writeString(reading);
+	}
+}
+

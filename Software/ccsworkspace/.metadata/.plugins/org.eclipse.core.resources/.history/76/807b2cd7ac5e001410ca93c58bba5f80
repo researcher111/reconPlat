@@ -1,0 +1,38 @@
+#include <msp430.h>
+
+char ADC_Str[8];
+
+void board_int(){
+	WDTCTL = WDTPW + WDTHOLD;
+}
+
+char *convertADC(int val,int dec_place) {
+	int digit;
+	int cVal;
+	char *ptr;
+	int tens;
+
+	ptr = ADC_Str;
+	cVal = val;
+	digit = 1000;
+	while(digit>=1) {
+		if(dec_place == digit) {
+			*(ptr++) = '.';				// Add a decimal place if given
+		}
+		if(digit > cVal) {
+			tens = 0;
+		} else {
+			tens = cVal / digit;
+		}
+		*(ptr++) = '0' + tens;
+		cVal -= (tens * digit);
+		digit /= 10;
+	}
+	*ptr = 0;							// Terminate the string
+	return ADC_Str;
+}
+
+#pragma vector=ADC10_VECTOR
+__interrupt void ADC10_ISR(void) {
+	__bic_SR_register_on_exit(CPUOFF);
+}

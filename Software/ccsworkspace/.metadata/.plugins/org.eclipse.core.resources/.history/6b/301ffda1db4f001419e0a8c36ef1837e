@@ -1,0 +1,57 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../lnk_msp430g2452.cmd 
+
+C_SRCS += \
+../ADC_and_LCD.c \
+../LCD.c \
+../helpers.c \
+../lightSense.c \
+../mic.c \
+../tempsense.c 
+
+OBJS += \
+./ADC_and_LCD.obj \
+./LCD.obj \
+./helpers.obj \
+./lightSense.obj \
+./mic.obj \
+./tempsense.obj 
+
+C_DEPS += \
+./ADC_and_LCD.pp \
+./LCD.pp \
+./helpers.pp \
+./lightSense.pp \
+./mic.pp \
+./tempsense.pp 
+
+C_DEPS__QUOTED += \
+"ADC_and_LCD.pp" \
+"LCD.pp" \
+"helpers.pp" \
+"lightSense.pp" \
+"mic.pp" \
+"tempsense.pp" 
+
+OBJS__QUOTED += \
+"ADC_and_LCD.obj" \
+"LCD.obj" \
+"helpers.obj" \
+"lightSense.obj" \
+"mic.obj" \
+"tempsense.obj" 
+
+C_SRCS__QUOTED += \
+"../ADC_and_LCD.c" \
+"../LCD.c" \
+"../helpers.c" \
+"../lightSense.c" \
+"../mic.c" \
+"../tempsense.c" 
+
+

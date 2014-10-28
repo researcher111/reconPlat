@@ -1,0 +1,14 @@
+/*
+ * mic.h
+ *
+ *  Created on: Oct 9, 2014
+ *      Author: Daniel
+ */
+
+#ifndef MIC_H_
+#define MIC_H_
+
+void micSense_init(void);
+
+
+#endif /* MIC_H_ */

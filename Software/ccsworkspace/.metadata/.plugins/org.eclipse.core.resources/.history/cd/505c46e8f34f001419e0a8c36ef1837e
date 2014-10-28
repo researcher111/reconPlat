@@ -1,0 +1,22 @@
+#include <msp430.h>
+#include "LCD.h"
+#include "tempSense.h"
+#include "helpers.h"
+
+void main(void) {
+	unsigned long degrees;
+	char* reading;
+	WDTCTL = WDTPW + WDTHOLD;
+	LCD_init();
+
+	while(1) {
+		LCD_gotoXY(0,0);
+		LCD_writeString("AT:");
+		degrees = tempSense();
+		LCD_writeChar('(');
+		reading = convertADC(degrees,1);
+		LCD_writeString(reading);
+		LCD_writeChar(0x7f);
+		LCD_writeString("C)");
+    }
+}

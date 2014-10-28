@@ -1,0 +1,36 @@
+/*
+ * lightsense.c
+ *
+ *  Author: Daniel
+ */
+#include <msp430.h>
+
+
+long lightSense()
+{
+
+	__delay_cycles(140);				// Wait for ADC Ref to settle
+	ADC10CTL0 |= ENC + ADC10SC;			// Sampling and conversion start
+	__bis_SR_register(CPUOFF + GIE);	// Low Power Mode 0 with interrupts enabled
+	return ADC10MEM;
+
+}
+
+
+// Function containing ADC set-up
+void ConfigureAdc(void)
+{
+
+	ADC10CTL1 = INCH_3 + ADC10DIV_3 ;         // Channel 3, ADC10CLK/3
+	ADC10CTL0 = SREF_0 + ADC10SHT_3 + ADC10ON + ADC10IE;  // Vcc & Vss as reference, Sample and hold for 64 Clock cycles, ADC on, ADC interrupt enable
+	ADC10AE0 |= BIT3;                         // ADC input enable P1.3
+}
+
+
+
+
+void lightSense_init(){
+			P1SEL |= BIT3;					// ADC input pin P1.3
+			ConfigureAdc();					// ADC set-up function call
+			__enable_interrupt();			// Enable interrupts.
+}

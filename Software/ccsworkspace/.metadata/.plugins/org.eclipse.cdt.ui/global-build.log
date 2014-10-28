@@ -2,23 +2,22 @@
 **** Build of configuration Debug for project SmartWatch2 ****
 
 "C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-'Building file: ../ADC_and_LCD.c'
+'Building file: ../main.c'
 'Invoking: MSP430 Compiler'
-"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power=all -g --define=__MSP430G2452__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="ADC_and_LCD.pp"  "../ADC_and_LCD.c"
-"../ADC_and_LCD.c", line 23: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../ADC_and_LCD.c", line 26: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
-"../ADC_and_LCD.c", line 27: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../ADC_and_LCD.c", line 34: warning #179-D: variable "volts" was declared but never referenced
-"../ADC_and_LCD.c", line 35: warning #179-D: variable "lux" was declared but never referenced
-"../ADC_and_LCD.c", line 56: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
-"../ADC_and_LCD.c", line 67: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-'Finished building: ../ADC_and_LCD.c'
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/Users/Daniel/OneDrive/Research/watchoo/ccsworkspace/SmartWatch2/Middleware" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power="all" -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 14: warning #225-D: function "board_init" declared implicitly
+"../main.c", line 16: warning #225-D: function "uart_init" declared implicitly
+"../main.c", line 50: warning #225-D: function "micSense" declared implicitly
+"../main.c", line 55: warning #225-D: function "uart_puts" declared implicitly
+"../main.c", line 57: warning #225-D: function "uart_getc" declared implicitly
+"../main.c", line 10: warning #179-D: variable "volts" was declared but never referenced
+'Finished building: ../main.c'
 ' '
 'Building target: SmartWatch2.out'
 'Invoking: MSP430 Linker'
-"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --advice:power=all -g --define=__MSP430G2452__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"SmartWatch2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccsv5/ccs_base/msp430/include" -i"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/lib" -i"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="SmartWatch2_linkInfo.xml" --rom_model -o "SmartWatch2.out"  "./PCD8544.obj" "./ADC_and_LCD.obj" "../lnk_msp430g2452.cmd" -l"libc.a" 
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --advice:power=all -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"SmartWatch2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccsv5/ccs_base/msp430/include" -i"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/lib" -i"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="SmartWatch2_linkInfo.xml" --rom_model -o "SmartWatch2.out"  "./Middleware/uart.obj" "./Middleware/tempSense.obj" "./Middleware/micSense.obj" "./Middleware/lightSense.obj" "./Middleware/helpers.obj" "./Middleware/LCD.obj" "./main.obj" "../lnk_msp430g2553.cmd" -l"libc.a" 
 <Linking>
-remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 'Finished building target: SmartWatch2.out'
 ' '
 
@@ -27,54 +26,56 @@ remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recomm
 **** Build of configuration Debug for project SmartWatch2 ****
 
 "C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-gmake: Nothing to be done for `all'.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project SmartWatch2 ****
-
-"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-'Building file: ../ADC_and_LCD.c'
+'Building file: ../Middleware/LCD.c'
 'Invoking: MSP430 Compiler'
-"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power=all -g --define=__MSP430G2452__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="ADC_and_LCD.pp"  "../ADC_and_LCD.c"
-"../ADC_and_LCD.c", line 23: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../ADC_and_LCD.c", line 26: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
-"../ADC_and_LCD.c", line 27: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../ADC_and_LCD.c", line 41: error #31: expression must have integral type
-"../ADC_and_LCD.c", line 35: warning #179-D: variable "lux" was declared but never referenced
-"../ADC_and_LCD.c", line 57: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
-"../ADC_and_LCD.c", line 68: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../ADC_and_LCD.c", line 92: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
-"../ADC_and_LCD.c", line 102: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-1 error detected in the compilation of "../ADC_and_LCD.c".
-
->> Compilation failure
-gmake: *** [ADC_and_LCD.obj] Error 1
-gmake: Target `all' not remade because of errors.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project SmartWatch2 ****
-
-"C:\\ti\\ccsv5\\utils\\bin\\gmake" -k all 
-'Building file: ../ADC_and_LCD.c'
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power="all" -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="Middleware/LCD.pp" --obj_directory="Middleware"  "../Middleware/LCD.c"
+"../Middleware/LCD.c", line 148: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../Middleware/LCD.c", line 149: remark #2553-D: (ULP 14.1) Array index (involving "c") of type "int". Recommend using "unsigned int"
+"../Middleware/LCD.c", line 190: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../Middleware/LCD.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+'Finished building: ../Middleware/LCD.c'
+' '
+'Building file: ../Middleware/helpers.c'
 'Invoking: MSP430 Compiler'
-"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power=all -g --define=__MSP430G2452__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="ADC_and_LCD.pp"  "../ADC_and_LCD.c"
-"../ADC_and_LCD.c", line 23: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../ADC_and_LCD.c", line 26: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
-"../ADC_and_LCD.c", line 27: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../ADC_and_LCD.c", line 35: warning #179-D: variable "lux" was declared but never referenced
-"../ADC_and_LCD.c", line 57: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
-"../ADC_and_LCD.c", line 68: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-"../ADC_and_LCD.c", line 92: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
-"../ADC_and_LCD.c", line 102: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-'Finished building: ../ADC_and_LCD.c'
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power="all" -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="Middleware/helpers.pp" --obj_directory="Middleware"  "../Middleware/helpers.c"
+"../Middleware/helpers.c", line 25: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../Middleware/helpers.c", line 28: remark #1533-D: (ULP 6.1) Detected use of multiplication on a device that has no hardware multiplier
+"../Middleware/helpers.c", line 29: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+'Finished building: ../Middleware/helpers.c'
+' '
+'Building file: ../Middleware/lightSense.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power="all" -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="Middleware/lightSense.pp" --obj_directory="Middleware"  "../Middleware/lightSense.c"
+"../Middleware/lightSense.c", line 17: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../Middleware/lightSense.c'
+' '
+'Building file: ../Middleware/micSense.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power="all" -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="Middleware/micSense.pp" --obj_directory="Middleware"  "../Middleware/micSense.c"
+"../Middleware/micSense.c", line 17: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../Middleware/micSense.c'
+' '
+'Building file: ../Middleware/tempSense.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power="all" -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="Middleware/tempSense.pp" --obj_directory="Middleware"  "../Middleware/tempSense.c"
+"../Middleware/tempSense.c", line 17: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../Middleware/tempSense.c", line 22: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+'Finished building: ../Middleware/tempSense.c'
+' '
+'Building file: ../Middleware/uart.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --include_path="C:/ti/ccsv5/ccs_base/msp430/include" --include_path="C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --advice:power="all" -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal --preproc_with_compile --preproc_dependency="Middleware/uart.pp" --obj_directory="Middleware"  "../Middleware/uart.c"
+"../Middleware/uart.c", line 67: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../Middleware/uart.c", line 88: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../Middleware/uart.c", line 88: remark #1543-D: (ULP 12.2) Detected for loop with repetitive data transfer. Recommend using DMA
+"../Middleware/uart.c", line 110: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+'Finished building: ../Middleware/uart.c'
 ' '
 'Building target: SmartWatch2.out'
 'Invoking: MSP430 Linker'
-"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --advice:power=all -g --define=__MSP430G2452__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"SmartWatch2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccsv5/ccs_base/msp430/include" -i"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/lib" -i"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="SmartWatch2_linkInfo.xml" --rom_model -o "SmartWatch2.out"  "./PCD8544.obj" "./ADC_and_LCD.obj" "../lnk_msp430g2452.cmd" -l"libc.a" 
+"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/bin/cl430" -vmsp --abi=eabi --advice:power=all -g --define=__MSP430G2553__ --diag_warning=225 --display_error_number --diag_wrap=off --printf_support=minimal -z -m"SmartWatch2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccsv5/ccs_base/msp430/include" -i"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/lib" -i"C:/ti/ccsv5/tools/compiler/msp430_4.2.1/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="SmartWatch2_linkInfo.xml" --rom_model -o "SmartWatch2.out"  "./Middleware/uart.obj" "./Middleware/tempSense.obj" "./Middleware/micSense.obj" "./Middleware/lightSense.obj" "./Middleware/helpers.obj" "./Middleware/LCD.obj" "./main.obj" "../lnk_msp430g2553.cmd" -l"libc.a" 
 <Linking>
-remark #10372-D: (ULP 4.1) Detected uninitialized Port 1 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 'Finished building target: SmartWatch2.out'
 ' '
 

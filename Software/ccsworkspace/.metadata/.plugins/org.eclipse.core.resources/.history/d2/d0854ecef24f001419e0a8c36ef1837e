@@ -1,0 +1,27 @@
+char ADC_Str[8];
+
+char *convertADC(int val,int dec_place) {
+	int digit;
+	int cVal;
+	char *ptr;
+	int tens;
+
+	ptr = ADC_Str;
+	cVal = val;
+	digit = 1000;
+	while(digit>=1) {
+		if(dec_place == digit) {
+			*(ptr++) = '.';				// Add a decimal place if given
+		}
+		if(digit > cVal) {
+			tens = 0;
+		} else {
+			tens = cVal / digit;
+		}
+		*(ptr++) = '0' + tens;
+		cVal -= (tens * digit);
+		digit /= 10;
+	}
+	*ptr = 0;							// Terminate the string
+	return ADC_Str;
+}

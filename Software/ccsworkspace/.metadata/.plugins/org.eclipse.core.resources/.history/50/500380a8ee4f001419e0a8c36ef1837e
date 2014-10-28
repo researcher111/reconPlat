@@ -1,0 +1,16 @@
+/*
+ * lightsense.h
+ *
+ *  Created on: Oct 9, 2014
+ *      Author: Daniel
+ */
+
+#ifndef LIGHTSENSE_H_
+#define LIGHTSENSE_H_
+
+void lightSense_init(void);
+long lightSense(void);
+void ConfigureAdc(void);
+
+
+#endif /* LIGHTSENSE_H_ */

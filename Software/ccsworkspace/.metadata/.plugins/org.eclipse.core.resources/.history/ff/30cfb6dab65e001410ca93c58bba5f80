@@ -1,0 +1,63 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../lnk_msp430g2553.cmd 
+
+C_SRCS += \
+../LCD.c \
+../helpers.c \
+../lightSense.c \
+../main.c \
+../micSense.c \
+../tempSense.c \
+../uart.c 
+
+OBJS += \
+./LCD.obj \
+./helpers.obj \
+./lightSense.obj \
+./main.obj \
+./micSense.obj \
+./tempSense.obj \
+./uart.obj 
+
+C_DEPS += \
+./LCD.pp \
+./helpers.pp \
+./lightSense.pp \
+./main.pp \
+./micSense.pp \
+./tempSense.pp \
+./uart.pp 
+
+C_DEPS__QUOTED += \
+"LCD.pp" \
+"helpers.pp" \
+"lightSense.pp" \
+"main.pp" \
+"micSense.pp" \
+"tempSense.pp" \
+"uart.pp" 
+
+OBJS__QUOTED += \
+"LCD.obj" \
+"helpers.obj" \
+"lightSense.obj" \
+"main.obj" \
+"micSense.obj" \
+"tempSense.obj" \
+"uart.obj" 
+
+C_SRCS__QUOTED += \
+"../LCD.c" \
+"../helpers.c" \
+"../lightSense.c" \
+"../main.c" \
+"../micSense.c" \
+"../tempSense.c" \
+"../uart.c" 
+
+

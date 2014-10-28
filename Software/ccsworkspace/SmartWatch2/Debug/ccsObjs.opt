@@ -1,1 +1,1 @@
-"./PCD8544.obj" "./ADC_and_LCD.obj" "../lnk_msp430g2452.cmd" -l"libc.a" 
+"./Middleware/uart.obj" "./Middleware/tempSense.obj" "./Middleware/micSense.obj" "./Middleware/lightSense.obj" "./Middleware/helpers.obj" "./Middleware/LCD.obj" "./main.obj" "../lnk_msp430g2553.cmd" -l"libc.a" 

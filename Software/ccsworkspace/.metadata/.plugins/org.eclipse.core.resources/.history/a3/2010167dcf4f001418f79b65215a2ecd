@@ -1,0 +1,11 @@
+/*
+ * tempSense.c
+ *
+ *  Author: Daniel
+ */
+
+
+void tempSense_init(void)
+{
+
+}

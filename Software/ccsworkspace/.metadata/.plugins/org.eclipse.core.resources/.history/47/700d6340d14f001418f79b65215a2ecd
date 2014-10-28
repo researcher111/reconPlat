@@ -1,0 +1,21 @@
+/*
+ * lightsense.c
+ *
+ *  Author: Daniel
+ */
+
+
+void lightSense_init(void)
+{
+		ADC10CTL0 &= ~ENC;							// Turn off ADC so we can change settings
+
+		ADC10CTL1 = INCH_4 + ADC10DIV_0;			// Channel 3 (pin 1.4)
+		ADC10CTL0 = SREF_0 + ADC10SHT_2 + ADC10ON + ADC10IE;	// Shorter sample and hold time, turn on ADC and use interrupts
+		ADC10AE0 |= BIT3;							// Enable bit 3
+		ADC10CTL0 |= ENC + ADC10SC;					// Start the conversion
+		__bis_SR_register(CPUOFF + GIE);			// Turn off CPU and enable interrupts (ISR re-enables CPU)
+		value = ADC10MEM;
+
+}
+
+
