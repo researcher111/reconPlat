@@ -52,9 +52,9 @@ void main(void) {
 
 
 		__enable_interrupt();
-		 uart_puts(reading);
+		 //uart_puts(reading);
 
-		 unsigned char c = uart_getc(); // Get convermation to progress.
+		 //unsigned char c = uart_getc(); // Get convermation to progress.
 	}
 }
 
