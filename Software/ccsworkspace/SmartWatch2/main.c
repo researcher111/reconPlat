@@ -29,7 +29,7 @@ void main(void) {
 
 
 /*	**************************************************************************
-*	Write out the VCC/2 ADC Values
+*	Write out the  ADC Values Light sensor (Pin 1.3)
 *
 */
 		LCD_gotoXY(0,2);
@@ -51,10 +51,30 @@ void main(void) {
 
 
 
-		__enable_interrupt();
-		 //uart_puts(reading);
+/*	**************************************************************************
+*	Write out the Sensing Module values ADC Values (Pin 1.6)
+*
+*/
+		LCD_gotoXY(0,5);							// Move to next line
+		LCD_writeString("IR:  ");
+		long valueSense = moduleSense();
+		if( valueSense < 1020){ // Detected IR pulse
+			LCD_writeString("Signal");
+			__enable_interrupt();
+			uart_puts(reading);
+			unsigned char c = uart_getc(); // Get convermation to progress.
+		}else{
+			LCD_writeString("NO Signal");
 
-		 //unsigned char c = uart_getc(); // Get convermation to progress.
+		}
+
+
+
+
+		//	__enable_interrupt();
+		//uart_puts(reading);
+		//unsigned char c = uart_getc(); // Get convermation to progress.
+		 //
 	}
 }
 
